@@ -20,6 +20,9 @@ module.exports = function(grunt){
     },
 
     uglify: {
+      options: { 
+        banner: '/\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n/\n' 
+      },
       dist: {
         files: {
           'dist/js/nomDuFichierFinal.min.js': [
@@ -82,7 +85,10 @@ module.exports = function(grunt){
 
   });
 
-  // Default task(s).
-  grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'uglify', 'imagemin']);
+
+  // ========= // CREATE TASKS =========
+
+  // this default task will go through all configuration (dev and production) in each task 
+  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'sass', 'imagemin']);
 
 };
