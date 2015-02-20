@@ -10,17 +10,18 @@
   + js
   + sass
   
-### Start Grunt
+#### Start Grunt
+
 ```
 $ npm install
 ```
 ```
 $ grunt
 ```
-Attention add 
+Add folder **node_modules** on Gitignore
 
-For sass compilation use 
+####For sass compilation use 
 ```
 $ grunt watch 
 ```
-Add folder **node_modules** on Gitignore
+
